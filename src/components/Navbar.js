@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import Logo from "../components/logo.png";
 import "../App.css";
 
@@ -12,8 +14,14 @@ function Navbar() {
         width={70}
         className="md:w-[80px]"
       />{" "}
-      <h1 className="heading text-xl md:text-2xl "> Movies </h1>{" "}
-      <h1 className="heading text-xl md:text-2xl"> Favourites </h1>{" "}
+      <Link to="/" className="heading text-xl md:text-2xl ">
+        {" "}
+        Movies{" "}
+      </Link>{" "}
+      <Link to="/favourites" className="heading text-xl md:text-2xl">
+        {" "}
+        Favourites{" "}
+      </Link>{" "}
     </div>
   );
 }
