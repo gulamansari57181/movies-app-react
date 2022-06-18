@@ -5,25 +5,24 @@ import Movies from "./components/Movies";
 import Pagination from "./components/Pagination";
 import Favourites from "./components/Favourites";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar> </Navbar>
-
       <Routes>
         <Route
           path="/"
           element={
             <>
-              <Herosection></Herosection>
-              <Movies></Movies>
-              <Pagination></Pagination>
+              <Herosection> </Herosection> <Movies> </Movies>{" "}
+              <Pagination> </Pagination>{" "}
             </>
           }
-        ></Route>
-        <Route path="/favourites" element={<Favourites></Favourites>}></Route>
-      </Routes>
+        ></Route>{" "}
+        <Route path="/favourites" element={<Favourites> </Favourites>}></Route>
+      </Routes>{" "}
     </BrowserRouter>
   );
 }
